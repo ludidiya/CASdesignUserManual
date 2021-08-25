@@ -1,0 +1,25 @@
+input: .
+output: .retype
+url: tool.com
+
+branding:
+  logo: /static/logo-light.png
+  logoDark: /static/logo-dark.png
+  title: CASdesign
+  label: V2.0.0
+  colors:
+    label:
+      text: #E74C3C
+      background: #666666
+
+links:
+- text: CASdesignHome
+  link: http://124.71.187.96:8081/
+
+footer:
+  copyright: "&copy; Copyright {{ year }}. [ShenZhen Synthetic Biology Infrustructure.](http://www.isynbio.org.cn/institution-detail.aspx?detail=1651) All rights reserved."
+
+edit:
+  repo: "https://github.com/your-organization/your-repo"
+  branch: website
+  label: Edit on GitHub
