@@ -1,6 +1,6 @@
 input: .
 output: .retype
-url: tool.com
+url: #
 
 branding:
   logo: /static/logo-light.png
