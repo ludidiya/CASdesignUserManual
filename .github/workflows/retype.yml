@@ -19,6 +19,8 @@ jobs:
           dotnet-version: 5.0.x
 
       - uses: retypeapp/action-build@v1
+        with:
+          config: CASdesignUserManual
 
       - uses: retypeapp/action-github-pages@v1
         with:
