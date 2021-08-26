@@ -1,6 +1,6 @@
 input: ./
 output: .CASdesignUserManual
-url: casdesignusermanual.com
+url: ludidiya.github.io/CASdesignUserManual
 
 branding:
   logo: ./static/logo-light.png
