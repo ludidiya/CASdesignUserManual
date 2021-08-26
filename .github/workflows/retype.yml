@@ -22,7 +22,6 @@ jobs:
 
       - uses: retypeapp/action-github-pages@v1
         with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages
+          branch: gh-pages
           update-branch: true
 
