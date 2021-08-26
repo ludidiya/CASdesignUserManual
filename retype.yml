@@ -1,6 +1,6 @@
-input: .
+input: ./
 output: .CASdesignUserManual
-url: #
+url: casdesignusermanual.com
 
 branding:
   logo: ./static/logo-light.png
