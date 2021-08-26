@@ -2,7 +2,7 @@
 author:
   name: LING ld
   link: 
-  avatar: ./static/avatar-girl.png
+  avatar: static/avatar-girl.png
 
 label: Background
 icon: info
