@@ -2,7 +2,7 @@
 author:
   name: 
   link: 
-  avatar: /static/avatar-girl.png
+  avatar: ./static/avatar-girl.png
 
 label: Verified gRNAs
 icon: checklist
