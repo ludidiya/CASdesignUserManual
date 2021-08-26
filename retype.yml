@@ -1,5 +1,5 @@
 input: .
-output: .retype
+output: .CASdesignUserManual
 url: #
 
 branding:
@@ -13,7 +13,7 @@ branding:
       background: #666666
 
 links:
-- text: CASdesignHome
+- text: CASdesignWebTool
   link: http://124.71.187.96:8081/
 
 footer:
