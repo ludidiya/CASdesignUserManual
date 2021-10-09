@@ -24,5 +24,3 @@ jobs:
         with:
           branch: gh-pages
           update-branch: true
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
