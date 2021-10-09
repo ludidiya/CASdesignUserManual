@@ -20,8 +20,9 @@ jobs:
 
       - uses: retypeapp/action-build@v1
       
-      - uses: retypeapp/action-github-pages@v1
+      - uses: retypeapp/action-github-pages
         with:
           branch: gh-pages
           update-branch: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
