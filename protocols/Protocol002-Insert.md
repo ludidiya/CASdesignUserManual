@@ -2,7 +2,7 @@
 author:
   name: WU yl
   link: 
-  avatar: ./static/avatar-girl.png
+  avatar: ../static/avatar-girl.png
 
 label: Protocol for Knock and Insert
 icon: checklist

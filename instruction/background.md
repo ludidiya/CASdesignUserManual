@@ -2,7 +2,7 @@
 author:
   name: LING ld
   link: 
-  avatar: static/avatar-girl.png
+  avatar: ../static/avatar-girl.png
 
 label: Background
 icon: info
@@ -11,7 +11,7 @@ order: A
 
 # 背景
 
-## 1、位点编辑逻辑
+## 1. 位点编辑逻辑
 
 ```mermaid
 graph TB;
@@ -44,11 +44,11 @@ graph TB;
 
 随后，本文将对该网站工具所依赖的算法工具进行逐一介绍。
 
-## 2、gRNA设计（CHOPCHOP） 
+## 2. gRNA设计（CHOPCHOP） 
 
 CRISPR-Cas的使用在现代生物学中无处不在。例如，CRISPR-Cas已被用于将新序列引入基因组，激活或抑制转录，用于靶向突变，作为诊断工具等。所有的CRISPR-Cas应用都使用sgRNA将CRISPR效应蛋白定向到其靶标。为了方便CRISPR–Cas系统的广泛应用，Labun, K.等人开发了CHOPCHOP这个直观的网络工具，用于在各种应用场景下识别CRISPR-Cas单导向RNA（sgRNA）靶标。
 
-我们这个网页工具，在sgRNA设计部分便是整合了CHOPCHOP的部分功能。具体整合的功能在随后的[参数设置](/instruction/Parameters.md)、[结果输出解读](/instruction/Results.md)中会具体介绍到。
+我们这个网页工具，在sgRNA设计部分便是整合了CHOPCHOP的部分功能。具体整合的功能在随后的[参数设置](/instruction/Parameters.md)中会具体介绍到。
 
 !!! **参考资料**
 
@@ -59,7 +59,7 @@ CRISPR-Cas的使用在现代生物学中无处不在。例如，CRISPR-Cas已被
 :sparkles: 3）[CHOPCHOP源码](https://bitbucket.org/valenlab/chopchop/src/master/)
 !!!
 
-## 3、引物Tm计算（Primer3）
+## 3. 引物Tm计算（Primer3）
 
 对于引物的解链温度，我们使用了以下两种近似算法：
 
@@ -88,11 +88,11 @@ Sequence for maximum Tm calculation:   CTCTGCCTAGCTCTCT
 
 :sparkles: 1）上述两个公式中，`w`、`x`、`y`、`z` 分别表示序列中 `A`、`T`、`G`、`C`碱基数。
 
-:sparkles: 2）**假设：** 上述方程假设退火发生在50nM引物、50mM Na^+^和pH7.0的标准条件下。
+:sparkles: 2）**假设：** 上述方程假设退火发生在50nM引物、50mM Na+和pH 7.0的标准条件下。
 
 !!!
 
-## 4、序列可视化
+## 4. 序列可视化
 
 序列可视化工具使用的是GitHub开源工具[Open Vector Editor](https://github.com/TeselaGen/openVectorEditor)，支持小片段DNA序列（非基因组序列）的可视化、注释，并方便用户在此界面直观地进行交互式基因编辑操作。
 

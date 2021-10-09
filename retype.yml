@@ -1,12 +1,11 @@
-input: ./
+input: .
 output: .CASdesignUserManual
-base: CASdesignUserManual
 url: ludidiya.github.io/CASdesignUserManual
 favicon: static/favicon.png
 
 branding:
-  logo: ./static/logo-light.png
-  logoDark: ./static/logo-dark.png
+  logo: static/logo-light.png
+  logoDark: static/logo-dark.png
   title: CASdesign
   label: V2.0.0
   colors:
