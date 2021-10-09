@@ -16,23 +16,23 @@
     <meta property="og:url" content="https://ludidiya.github.io/CASdesignUserManual/instruction/background/">
     <meta property="og:title" content="背景">
     <meta property="og:description" content="上面的流程图简要地展示了敲除、整合设计的基本逻辑。">
-    <meta property="og:image" content="https://ludidiya.github.io/CASdesignUserManual/static/linear-map.png">
+    <meta property="og:image" content="https://ludidiya.github.io/CASdesignUserManual/CASdesignUserManual/static/linear-map.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://ludidiya.github.io/CASdesignUserManual/instruction/background/">
     <meta property="twitter:title" content="背景">
     <meta property="twitter:description" content="上面的流程图简要地展示了敲除、整合设计的基本逻辑。">
-    <meta property="twitter:image" content="https://ludidiya.github.io/CASdesignUserManual/static/linear-map.png">
+    <meta property="twitter:image" content="https://ludidiya.github.io/CASdesignUserManual/CASdesignUserManual/static/linear-map.png">
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/CASdesignUserManual/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/CASdesignUserManual/static/favicon.png" rel="icon" />
-    <link href="/CASdesignUserManual/resources/css/retype.css?v=1.8.2.683284010567" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/CASdesignUserManual/resources/css/retype.css?v=1.10.687082635911" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/CASdesignUserManual/resources/js/config.js?v=1.8.2.683284010567" defer data-turbo-track="reload"></script>
-    <script type="text/javascript" src="/CASdesignUserManual/resources/js/retype.js?v=1.8.2" defer data-turbo-track="reload"></script>
-    <script id="mermaid-js" type="text/javascript" src="/CASdesignUserManual/resources/js/mermaid.js?v=1.8.2" defer></script>
+    <script type="text/javascript" src="/CASdesignUserManual/resources/js/config.js?v=1.10.687082635911" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/CASdesignUserManual/resources/js/retype.js?v=1.10" defer data-turbo-track="reload"></script>
+    <script id="mermaid-js" type="text/javascript" src="/CASdesignUserManual/resources/js/mermaid.js?v=1.10" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -193,17 +193,17 @@
         <div>By</div>
         <div class="ml-2 flex items-center">
           <div class="flex-shrink-0 w-8 h-8 overflow-hidden rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" overflow="visible"><path fill="#616161" d="M0 0h34v34H0z"/><path fill="#fff" d="M20.2 18.6h-6.4c-2.21 0-4 1.79-4 4v1.6c0 .44.36.8.8.8.44 0 .8-.36.8-.8v-1.6c0-1.32 1.08-2.4 2.4-2.4h6.4c1.32 0 2.4 1.08 2.4 2.4v1.6c0 .44.36.8.8.8.44 0 .8-.36.8-.8v-1.6c0-2.21-1.79-4-4-4zM17 17c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0-6.4c1.32 0 2.4 1.08 2.4 2.4s-1.08 2.4-2.4 2.4-2.4-1.08-2.4-2.4 1.08-2.4 2.4-2.4z"/></svg>
+            <img class="object-cover" src="/CASdesignUserManual/static/avatar-girl.png"/>
           </div>
           <div class="ml-1 whitespace-nowrap text-gray-500 dark:text-dark-350">LING ld</div>
         </div>
     </div>
 </div>
 
-<doc-anchor-target id="1位点编辑逻辑">
+<doc-anchor-target id="1-位点编辑逻辑">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#1位点编辑逻辑">#</doc-anchor-trigger>
-        <span>1、位点编辑逻辑</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-位点编辑逻辑">#</doc-anchor-trigger>
+        <span>1. 位点编辑逻辑</span>
     </h2>
 </doc-anchor-target>
 <div class="overflow-hidden mb-6 py-4 dark:px-5 dark:bg-white rounded-md"><pre class="mermaid w-full">graph TB;
@@ -239,14 +239,14 @@
 </ul>
 <p>在<a href="/CASdesignUserManual/instruction/knock-out/">基因敲除具体操作示例</a>以及<a href="/CASdesignUserManual/instruction/knock-insert/">基因插入/替换具体操作示例</a>中，我们有详细的例子讲解如何使用本网站工具进行基因编辑并获取引物结果。</p>
 <p>随后，本文将对该网站工具所依赖的算法工具进行逐一介绍。</p>
-<doc-anchor-target id="2grna设计chopchop">
+<doc-anchor-target id="2-grna设计chopchop">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#2grna设计chopchop">#</doc-anchor-trigger>
-        <span>2、gRNA设计（CHOPCHOP）</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-grna设计chopchop">#</doc-anchor-trigger>
+        <span>2. gRNA设计（CHOPCHOP）</span>
     </h2>
 </doc-anchor-target>
 <p>CRISPR-Cas的使用在现代生物学中无处不在。例如，CRISPR-Cas已被用于将新序列引入基因组，激活或抑制转录，用于靶向突变，作为诊断工具等。所有的CRISPR-Cas应用都使用sgRNA将CRISPR效应蛋白定向到其靶标。为了方便CRISPR–Cas系统的广泛应用，Labun, K.等人开发了CHOPCHOP这个直观的网络工具，用于在各种应用场景下识别CRISPR-Cas单导向RNA（sgRNA）靶标。</p>
-<p>我们这个网页工具，在sgRNA设计部分便是整合了CHOPCHOP的部分功能。具体整合的功能在随后的<a href="/CASdesignUserManual/instruction/parameters/">参数设置</a>、<a href="/CASdesignUserManual/instruction/results/">结果输出解读</a>中会具体介绍到。</p>
+<p>我们这个网页工具，在sgRNA设计部分便是整合了CHOPCHOP的部分功能。具体整合的功能在随后的<a href="/CASdesignUserManual/instruction/parameters/">参数设置</a>中会具体介绍到。</p>
 <div class="flex mb-6">
     <div class="flex-shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
     <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
@@ -267,10 +267,10 @@
         </div>
     </div>
 </div>
-<doc-anchor-target id="3引物tm计算primer3">
+<doc-anchor-target id="3-引物tm计算primer3">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#3引物tm计算primer3">#</doc-anchor-trigger>
-        <span>3、引物Tm计算（Primer3）</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-引物tm计算primer3">#</doc-anchor-trigger>
+        <span>3. 引物Tm计算（Primer3）</span>
     </h2>
 </doc-anchor-target>
 <p>对于引物的解链温度，我们使用了以下两种近似算法：</p>
@@ -308,14 +308,14 @@ Sequence for maximum Tm calculation:   CTCTGCCTAGCTCTCT</code></pre>
         <div class="pr-5 ml-3">
             <h5><strong>参考资料</strong></h5>
 <p><span class="docs-emoji">&#x2728;</span> 1）上述两个公式中，<code v-pre>w</code>、<code v-pre>x</code>、<code v-pre>y</code>、<code v-pre>z</code> 分别表示序列中 <code v-pre>A</code>、<code v-pre>T</code>、<code v-pre>G</code>、<code v-pre>C</code>碱基数。</p>
-<p><span class="docs-emoji">&#x2728;</span> 2）<strong>假设：</strong> 上述方程假设退火发生在50nM引物、50mM Na^+^和pH7.0的标准条件下。</p>
+<p><span class="docs-emoji">&#x2728;</span> 2）<strong>假设：</strong> 上述方程假设退火发生在50nM引物、50mM Na+和pH 7.0的标准条件下。</p>
         </div>
     </div>
 </div>
-<doc-anchor-target id="4序列可视化">
+<doc-anchor-target id="4-序列可视化">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#4序列可视化">#</doc-anchor-trigger>
-        <span>4、序列可视化</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4-序列可视化">#</doc-anchor-trigger>
+        <span>4. 序列可视化</span>
     </h2>
 </doc-anchor-target>
 <p>序列可视化工具使用的是GitHub开源工具<a href="https://github.com/TeselaGen/openVectorEditor">Open Vector Editor</a>，支持小片段DNA序列（非基因组序列）的可视化、注释，并方便用户在此界面直观地进行交互式基因编辑操作。</p>
@@ -410,6 +410,6 @@ Sequence for maximum Tm calculation:   CTCTGCCTAGCTCTCT</code></pre>
 
         <div id="docs-overlay-target"></div>
 
-        <script>window.__DOCS__ = { "title": "Background", icon: "file", hasPrism: false, hasMermaid: true }</script>
+        <script>window.__DOCS__ = { "title": "Background", icon: "file", hasPrism: false, hasMermaid: true, hasMath: false }</script>
     </body>
 </html>

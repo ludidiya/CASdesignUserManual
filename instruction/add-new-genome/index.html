@@ -16,22 +16,22 @@
     <meta property="og:url" content="https://ludidiya.github.io/CASdesignUserManual/instruction/add-new-genome/">
     <meta property="og:title" content="新增基因组文件">
     <meta property="og:description" content="登录 CASdesign网站 后，如果发现菌株列表 中没有感兴趣的物种，您可以在网站左侧工具栏点击进入新增物种 页面。点击上传物种文件，根据弹出框的提示，填写新增物种基因组文件的基本信息，主要包括：">
-    <meta property="og:image" content="https://ludidiya.github.io/CASdesignUserManual/static/add-new-genomes.png">
+    <meta property="og:image" content="https://ludidiya.github.io/CASdesignUserManual/CASdesignUserManual/static/add-new-genomes.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://ludidiya.github.io/CASdesignUserManual/instruction/add-new-genome/">
     <meta property="twitter:title" content="新增基因组文件">
     <meta property="twitter:description" content="登录 CASdesign网站 后，如果发现菌株列表 中没有感兴趣的物种，您可以在网站左侧工具栏点击进入新增物种 页面。点击上传物种文件，根据弹出框的提示，填写新增物种基因组文件的基本信息，主要包括：">
-    <meta property="twitter:image" content="https://ludidiya.github.io/CASdesignUserManual/static/add-new-genomes.png">
+    <meta property="twitter:image" content="https://ludidiya.github.io/CASdesignUserManual/CASdesignUserManual/static/add-new-genomes.png">
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/CASdesignUserManual/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/CASdesignUserManual/static/favicon.png" rel="icon" />
-    <link href="/CASdesignUserManual/resources/css/retype.css?v=1.8.2.683284010567" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/CASdesignUserManual/resources/css/retype.css?v=1.10.687082635911" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/CASdesignUserManual/resources/js/config.js?v=1.8.2.683284010567" defer data-turbo-track="reload"></script>
-    <script type="text/javascript" src="/CASdesignUserManual/resources/js/retype.js?v=1.8.2" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/CASdesignUserManual/resources/js/config.js?v=1.10.687082635911" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/CASdesignUserManual/resources/js/retype.js?v=1.10" defer data-turbo-track="reload"></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -192,7 +192,7 @@
         <div>By</div>
         <div class="ml-2 flex items-center">
           <div class="flex-shrink-0 w-8 h-8 overflow-hidden rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" overflow="visible"><path fill="#616161" d="M0 0h34v34H0z"/><path fill="#fff" d="M20.2 18.6h-6.4c-2.21 0-4 1.79-4 4v1.6c0 .44.36.8.8.8.44 0 .8-.36.8-.8v-1.6c0-1.32 1.08-2.4 2.4-2.4h6.4c1.32 0 2.4 1.08 2.4 2.4v1.6c0 .44.36.8.8.8.44 0 .8-.36.8-.8v-1.6c0-2.21-1.79-4-4-4zM17 17c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0-6.4c1.32 0 2.4 1.08 2.4 2.4s-1.08 2.4-2.4 2.4-2.4-1.08-2.4-2.4 1.08-2.4 2.4-2.4z"/></svg>
+            <img class="object-cover" src="/CASdesignUserManual/static/avatar-girl.png"/>
           </div>
           <div class="ml-1 whitespace-nowrap text-gray-500 dark:text-dark-350">LING ld</div>
         </div>
@@ -210,13 +210,13 @@
 </li>
 <li><p>物种名：物种详细名称，可以有空格，如<code v-pre>copy_Saccharomyces cerevisiae S288CC</code>；</p>
 </li>
-<li><p>别名或简称：物种名的别名或简称，不可以有空格，如果有多个单词，请以英文输入法的<code v-pre>_</code>分割，如<code v-pre>sacCer3</code>；</p>
+<li><p>别名或简称：物种名的别名或简称，不可以有空格，如果有多个单词，请以下划线<code v-pre>_</code>分割，如<code v-pre>sacCer3</code>；</p>
 </li>
-<li><p>物种编号：物种编号，非必填项，用于区分比如菌株的不同株系，如<code v-pre>S288C</code>。</p>
+<li><p>物种编号：物种编号，非必填项，用于区分比如菌株的不同株系，如<code v-pre>S288C</code>。同上，不允许空格，多个单词需以下划线<code v-pre>_</code>分割。</p>
 </li>
 </ul>
-<p>填写好物种基本信息后，从您本地电脑里选择感兴趣物种的标准GenBank文件（主要包括<code v-pre>gb</code>、<code v-pre>gbk</code>、<code v-pre>gbff</code>格式）。</p>
-<p>上传成功后，请耐心等待30s左右，后台程序将会对新基因组文件进行解析。解析任务会将GenBank中注释的所有基因位点信息提取出来，以便用户通过<a href="/CASdesignUserManual/instruction/select-targets/#targrt-genes">搜索基因名来搜寻编辑区域</a>。此外，还将分析GenBank中各染色体的信息，以便用户通过<a href="/CASdesignUserManual/instruction/select-targets/#target-genomic-regions">自定义染色体编号及起始终止位点靶向选择编辑区域</a>。</p>
+<p>填写好物种基本信息后，从您本地电脑里选择感兴趣物种对应的标准GenBank文件（主要包括<code v-pre>gb</code>、<code v-pre>gbk</code>、<code v-pre>gbff</code>格式）。</p>
+<p>上传成功后，请耐心等待，后台程序将会对新基因组文件进行解析。解析任务会将GenBank中注释的所有基因位点信息提取出来，以便用户通过<a href="/CASdesignUserManual/instruction/select-targets/#targrt-genes">搜索基因名来靶向编辑区域</a>。此外，还将分析GenBank中各染色体的信息，以便用户通过<a href="/CASdesignUserManual/instruction/select-targets/#target-genomic-regions">自定义染色体编号及起始终止位点靶向选择编辑区域</a>。</p>
 <div class="flex mb-6">
     <div class="flex-shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
     <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
@@ -315,6 +315,6 @@
 
         <div id="docs-overlay-target"></div>
 
-        <script>window.__DOCS__ = { "title": "Add New Genomes", icon: "file", hasPrism: false, hasMermaid: false }</script>
+        <script>window.__DOCS__ = { "title": "Add New Genomes", icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
     </body>
 </html>
