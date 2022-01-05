@@ -28,10 +28,11 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/CASdesignUserManual/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/CASdesignUserManual/static/favicon.png" rel="icon" />
-    <link href="/CASdesignUserManual/resources/css/retype.css?v=1.10.687086012682" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/CASdesignUserManual/resources/css/retype.css?v=1.11.2.694668355126" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/CASdesignUserManual/resources/js/config.js?v=1.10.687086012682" defer data-turbo-track="reload"></script>
-    <script type="text/javascript" src="/CASdesignUserManual/resources/js/retype.js?v=1.10" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/CASdesignUserManual/resources/js/config.js?v=1.11.2.694668355126" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/CASdesignUserManual/resources/js/retype.js?v=1.11.2" defer data-turbo-track="reload"></script>
+    <script id="lunr-js" type="text/javascript" src="/CASdesignUserManual/resources/js/lunr.js?v=1.11.2.694668355126" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -78,7 +79,7 @@
                     </div>
 
                     <input class="w-full h-10 transition-colors duration-200 ease-in bg-gray-200 border border-transparent rounded md:text-sm hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-dark-600 dark:border-dark-600 placeholder-gray-400 dark:placeholder-dark-400"
-                    style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search docs" />
+                    style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search" />
                 </div>
 
                 <!-- Mobile search button mock -->
@@ -125,9 +126,10 @@
         <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
     </div>
 
+
     <div class="flex-shrink-0 mt-auto bg-transparent dark:border-dark-650">
         <a
-    class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in"
+    class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by"
     target="_blank"
     href="https://retype.com/"
     rel="noopener"
@@ -156,8 +158,9 @@
                 </nav>
             </div>
 
+
             <a
-    class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in"
+    class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by"
     target="_blank"
     href="https://retype.com/"
     rel="noopener"
@@ -361,12 +364,12 @@
 </li>
 <li>
 <ol type="a" start="3">
-<li>gRNA效率算法（<a href="/CASdesignUserManual/instruction/parameters/#1%E6%95%88%E7%8E%87%E7%AE%97%E6%B3%95">详情见下文</a>）；</li>
+<li>gRNA效率算法（详情见下文）；</li>
 </ol>
 </li>
 <li>
 <ol type="a" start="4">
-<li>gRNA载体引物（<a href="/CASdesignUserManual/instruction/parameters/#2grna%E8%BD%BD%E4%BD%93%E5%BC%95%E7%89%A9">详情见下文</a>）。</li>
+<li>gRNA载体引物（详情见下文）。</li>
 </ol>
 </li>
 </ul>
@@ -409,12 +412,42 @@
         <span>2）gRNA载体引物</span>
     </h3>
 </doc-anchor-target>
+<p>Reider Apel A等人发表的<a href="https://pubmed.ncbi.nlm.nih.gov/27899650/">【A Cas9-based toolkit to program gene expression in Saccharomyces cerevisiae】</a>一文中报道了27个高效的Cas9-sgRNA (pCut)质粒，可以整合到酵母1-16号染色体上23个特征良好的位点以使基因发生缺失或替换。</p>
+<ul>
+<li><a href="https://www.addgene.org/kits/mukhopadhyay-pcut-toolkit/#kit-contents">pCut质粒工具包可以从Addgene获取</a></li>
+</ul>
+<p>如下图，以基于CRISPR/Cas9原理对酵母基因组进行基因编辑，并使用<a href="https://www.addgene.org/kits/mukhopadhyay-pcut-toolkit/#kit-contents">pCut Plasmid Toolkit</a>中<a href="https://www.addgene.org/browse/sequence/193424/">p426_Cas9_gRNA-ARS106a</a>作为CRISPR基因编辑载体工具为例。在使用该软件进行gRNA设计时，需要指定gRNA在载体中所在位置两侧大约50-60bp（长度可调整）的序列，以最终输出gRNA引物来构建双链gRNA片段。</p>
 <p><figure class="content-center">
-    <img src="../../static/parameters/2-2-backbone-grna.png" alt="图3-2. gRNA载体引物设计。" />
-    <figcaption class="caption">图3-2. gRNA载体引物设计。</figcaption>
+    <img src="../../static/parameters/2-2-backbone-grna.png" alt="图3-2. p426_Cas9_gRNA-ARS106a载体与gRNA-Forward、gRNA-Reverse引物示意图。" />
+    <figcaption class="caption">图3-2. p426_Cas9_gRNA-ARS106a载体与gRNA-Forward、gRNA-Reverse引物示意图。</figcaption>
 </figure>
 </p>
-<p>根据不同的pCUT载体，可在参数设置处自定义gRNA插入位置两侧的引物序列。</p>
+<p>在本软件中，该设置在&quot;参数设置——Cas9/Cpf1&quot;界面下，如下图所示位置：</p>
+<p><figure class="content-center">
+    <img src="../../static/parameters/2-3-grna-primer.png" alt="图3-3. gRNA载体引物参数设置。" />
+    <figcaption class="caption">图3-3. gRNA载体引物参数设置。</figcaption>
+</figure>
+</p>
+<div class="flex mb-6">
+    <div class="flex-shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3">
+            <h5><strong>注意</strong></h5>
+<ul>
+<li>软件此处默认参数是使用p426_Cas9_gRNA-ARS106a载体时的引物片段，需要根据实际设计原理（Cas9或Cpf1）所用的载体工具来更新参数。</li>
+</ul>
+        </div>
+    </div>
+</div>
 <doc-anchor-target id="3-primers">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#3-primers">#</doc-anchor-trigger>
@@ -561,7 +594,7 @@
 </ul>
 
     </div>
-    <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© Copyright 2021. <a href="http://www.isynbio.org.cn/institution-detail.aspx?detail=1651">ShenZhen Synthetic Biology Infrustructure.</a> All rights reserved.</p>
+    <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© Copyright 2022. <a href="http://www.isynbio.org.cn/institution-detail.aspx?detail=1651">ShenZhen Synthetic Biology Infrustructure.</a> All rights reserved.</p>
 </div>
 </footer>
 
