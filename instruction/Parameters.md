@@ -114,7 +114,15 @@ Reider Apel A等人发表的[【A Cas9-based toolkit to program gene expression 
 
 在本软件中，该设置在"参数设置——Cas9/Cpf1"界面下，如下图所示位置：
 
-![图3-3. gRNA载体引物参数设置。](../static/parameters/2-3-gRNA-primer.png)
+![图3-3. gRNA载体引物片段参数设置。](../static/parameters/2-3-gRNA-primer.png)
+
+若设计得到的gRNA序列为`ACATCTCAAACAGAACATTG`，则结果页中得到的gRNA引物为：
+
+* gRNA-Forward: `tcctcgctggcgccggctgggcaacaccttcgggtggcgaatgggactttACATCTCAAACAGAACATTG`
+
+* gRNA-Reverse: `gttgataacggactagccttattttaacttgctatttctagctctaaaacCAATGTTCTGTTTGAGATGT`
+
+小写部分是根据使用的不同载体，在参数设置处定义的gRNA在载体中所处位置两侧片段（方向均为5'->3'），大写部分是gRNA片段。
 
 !!! **注意**
 
