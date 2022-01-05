@@ -28,11 +28,11 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/CASdesignUserManual/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/CASdesignUserManual/static/favicon.png" rel="icon" />
-    <link href="/CASdesignUserManual/resources/css/retype.css?v=1.11.2.694668355126" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/CASdesignUserManual/resources/css/retype.css?v=1.11.2.694671672973" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/CASdesignUserManual/resources/js/config.js?v=1.11.2.694668355126" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/CASdesignUserManual/resources/js/config.js?v=1.11.2.694671672973" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/CASdesignUserManual/resources/js/retype.js?v=1.11.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/CASdesignUserManual/resources/js/lunr.js?v=1.11.2.694668355126" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/CASdesignUserManual/resources/js/lunr.js?v=1.11.2.694671672973" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -424,10 +424,18 @@
 </p>
 <p>在本软件中，该设置在&quot;参数设置——Cas9/Cpf1&quot;界面下，如下图所示位置：</p>
 <p><figure class="content-center">
-    <img src="../../static/parameters/2-3-grna-primer.png" alt="图3-3. gRNA载体引物参数设置。" />
-    <figcaption class="caption">图3-3. gRNA载体引物参数设置。</figcaption>
+    <img src="../../static/parameters/2-3-grna-primer.png" alt="图3-3. gRNA载体引物片段参数设置。" />
+    <figcaption class="caption">图3-3. gRNA载体引物片段参数设置。</figcaption>
 </figure>
 </p>
+<p>若设计得到的gRNA序列为<code v-pre>ACATCTCAAACAGAACATTG</code>，则结果页中得到的gRNA引物为：</p>
+<ul>
+<li><p>gRNA-Forward: <code v-pre>tcctcgctggcgccggctgggcaacaccttcgggtggcgaatgggactttACATCTCAAACAGAACATTG</code></p>
+</li>
+<li><p>gRNA-Reverse: <code v-pre>gttgataacggactagccttattttaacttgctatttctagctctaaaacCAATGTTCTGTTTGAGATGT</code></p>
+</li>
+</ul>
+<p>小写部分是根据使用的不同载体，在参数设置处定义的gRNA在载体中所处位置两侧片段（方向均为5&#x27;-&gt;3&#x27;），大写部分是gRNA片段。</p>
 <div class="flex mb-6">
     <div class="flex-shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
     <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
