@@ -82,9 +82,9 @@ order: D
 
 * b. PAM序列：Cas9模式下默认的PAM序列为`NGG`，Cpf1模式下默认是PAM序列为`TTCN`；
 
-* c. gRNA效率算法（[详情见下文](/instruction/parameters/#1效率算法)）；
+* c. gRNA效率算法（详情见下文）；
 
-* d. gRNA载体引物（[详情见下文](/instruction/parameters/#2grna载体引物)）。
+* d. gRNA载体引物（详情见下文）。
 
 ### 1）效率算法
 
@@ -104,9 +104,23 @@ CRISPR sgRNA可以按2个标准进行排名：
 
 ### 2）gRNA载体引物
 
-![图3-2. gRNA载体引物设计。](../static/parameters/2-2-Backbone-gRNA.png)
+Reider Apel A等人发表的[【A Cas9-based toolkit to program gene expression in Saccharomyces cerevisiae】](https://pubmed.ncbi.nlm.nih.gov/27899650/)一文中报道了27个高效的Cas9-sgRNA (pCut)质粒，可以整合到酵母1-16号染色体上23个特征良好的位点以使基因发生缺失或替换。
 
-根据不同的pCUT载体，可在参数设置处自定义gRNA插入位置两侧的引物序列。
+* [pCut质粒工具包可以从Addgene获取](https://www.addgene.org/kits/mukhopadhyay-pcut-toolkit/#kit-contents)
+
+如下图，以基于CRISPR/Cas9原理对酵母基因组进行基因编辑，并使用[pCut Plasmid Toolkit](https://www.addgene.org/kits/mukhopadhyay-pcut-toolkit/#kit-contents)中[p426_Cas9_gRNA-ARS106a](https://www.addgene.org/browse/sequence/193424/)作为CRISPR基因编辑载体工具为例。在使用该软件进行gRNA设计时，需要指定gRNA在载体中所在位置两侧大约50-60bp（长度可调整）的序列，以最终输出gRNA引物来构建双链gRNA片段。
+
+![图3-2. p426_Cas9_gRNA-ARS106a载体与gRNA-Forward、gRNA-Reverse引物示意图。](../static/parameters/2-2-Backbone-gRNA.png)
+
+在本软件中，该设置在"参数设置——Cas9/Cpf1"界面下，如下图所示位置：
+
+![图3-3. gRNA载体引物参数设置。](../static/parameters/2-3-gRNA-primer.png)
+
+!!! **注意**
+
+* 软件此处默认参数是使用p426_Cas9_gRNA-ARS106a载体时的引物片段，需要根据实际设计原理（Cas9或Cpf1）所用的载体工具来更新参数。
+!!!
+
 
 ## 3. Primers
 
