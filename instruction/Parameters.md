@@ -113,15 +113,15 @@ CRISPR sgRNA可以按2个标准进行排名：
 
 ### 2）自定义gRNA引物片段
 
-在实验中，gRNA片段需要插入合适的载体骨架中以构建CRISPR/Cas9或CRISPR/Cpf1表达载体，根据gRNA在载体中的插入位置指定gRNA上下游50bp的片段，以在结果页输出一对gRNA引物。
+在实验中，gRNA片段需要插入合适的载体骨架中以构建CRISPR/Cas9或CRISPR/Cpf1表达载体，根据gRNA在载体中的插入位置指定gRNA上下游长50bp的片段，以在结果页输出一对gRNA引物。
 
 以使用`p426_Cas9_gRNA-ARS106a`载体为例，如下图所示：
 
 * 已知gRNA在载体中的插入位置在`gRNA-scafold`上游;
-* 页面参数设置中指定gRNA上（Forward）下（Reverse）游50bp的长度（图中`白色`标注的区域）；
+* 页面参数设置中指定gRNA上（Forward）下（Reverse）游长50bp的片段（图中`白色`标注的区域）；
 * Forward为正义链（Top Strand）5'->3'片段；
 * Reverse为负义链（Bottom Strand）5'->3'片段；
-* 根据改参数设置，最终在结果页会输出`紫色`区域示意的gRNA引物对。
+* 根据该参数设置，最终在结果页会输出`紫色`区域示意的gRNA引物对。
 
 ![](../static/parameters/zoomedMap.png)
 ![](../static/parameters/sequenceMap.png)
