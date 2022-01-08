@@ -28,11 +28,11 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/CASdesignUserManual/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/CASdesignUserManual/static/favicon.png" rel="icon" />
-    <link href="/CASdesignUserManual/resources/css/retype.css?v=1.11.2.694671672973" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/CASdesignUserManual/resources/css/retype.css?v=1.11.2.694951834968" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/CASdesignUserManual/resources/js/config.js?v=1.11.2.694671672973" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/CASdesignUserManual/resources/js/config.js?v=1.11.2.694951834968" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/CASdesignUserManual/resources/js/retype.js?v=1.11.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/CASdesignUserManual/resources/js/lunr.js?v=1.11.2.694671672973" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/CASdesignUserManual/resources/js/lunr.js?v=1.11.2.694951834968" defer></script>
     <script id="mermaid-js" type="text/javascript" src="/CASdesignUserManual/resources/js/mermaid.js?v=1.11.2" defer></script>
 </head>
     <body>
@@ -226,7 +226,7 @@
 <ul>
 <li>
 <ol type="a">
-<li>无论是哪种编辑设计，都应该针对编辑区，输出对应的导向性RNA（guide RNA，gRNA）。它是一种短的RNA分子，用于基于CRISPR系统的基因组编辑，这是基因组修饰工具的一种高度特定的类型。gRNA由约20bp长的核苷酸序列组成，该序列与基因组的目标DNA序列结合。</li>
+<li>对于<code v-pre>敲除</code>或者<code v-pre>整合(替换/敲入)</code>设计，都会输出对应的导向性RNA（guide RNA，gRNA）。它是一种短的RNA分子，用于基于CRISPR系统的基因组编辑，这是基因组修饰工具的一种高度特定的类型。gRNA由约20bp长的核苷酸序列组成，该序列与基因组的目标DNA序列结合。</li>
 </ol>
 </li>
 <li>
@@ -242,14 +242,14 @@
 </ul>
 <p>在<a href="/CASdesignUserManual/instruction/knock-out/">基因敲除具体操作示例</a>以及<a href="/CASdesignUserManual/instruction/knock-insert/">基因插入/替换具体操作示例</a>中，我们有详细的例子讲解如何使用本网站工具进行基因编辑并获取引物结果。</p>
 <p>随后，本文将对该网站工具所依赖的算法工具进行逐一介绍。</p>
-<doc-anchor-target id="2-grna设计chopchop">
+<doc-anchor-target id="2-grna设计">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#2-grna设计chopchop">#</doc-anchor-trigger>
-        <span>2. gRNA设计（CHOPCHOP）</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-grna设计">#</doc-anchor-trigger>
+        <span>2. gRNA设计</span>
     </h2>
 </doc-anchor-target>
-<p>CRISPR-Cas的使用在现代生物学中无处不在。例如，CRISPR-Cas已被用于将新序列引入基因组，激活或抑制转录，用于靶向突变，作为诊断工具等。所有的CRISPR-Cas应用都使用sgRNA将CRISPR效应蛋白定向到其靶标。为了方便CRISPR–Cas系统的广泛应用，Labun, K.等人开发了CHOPCHOP这个直观的网络工具，用于在各种应用场景下识别CRISPR-Cas单导向RNA（sgRNA）靶标。</p>
-<p>我们这个网页工具，在sgRNA设计部分便是整合了CHOPCHOP的部分功能。具体整合的功能在随后的<a href="/CASdesignUserManual/instruction/parameters/">参数设置</a>中会具体介绍到。</p>
+<p>CRISPR基因编辑技术在现代生物学中无处不在。例如，CRISPR-Cas已被用于将新序列引入基因组，激活或抑制转录，用于靶向突变，作为诊断工具等。所有的CRISPR-Cas应用都使用sgRNA将CRISPR效应蛋白定向到其靶标。为了方便CRISPR系统的广泛应用，Labun, K.等人开发了CHOPCHOP这个直观的网络工具，用于在各种应用场景下识别<code v-pre>CRISPR/Cas9</code>或<code v-pre>CRISPR/Cpf1</code>单导向RNA（sgRNA）靶标。</p>
+<p>我们这个网页工具，在sgRNA设计部分便是整合了CHOPCHOP的部分功能。这些功能可以提高sgRNA的定位能力、可用性和效率。为了增加靶向方位和特异性，CHOPCHOP为定制长度的gRNA提供了支持，并且使用了来自多个大规模研究的模型来评估整个sgRNA及其周围区域的序列组成。具体见<a href="/CASdesignUserManual/instruction/parameters/">参数设置</a>。</p>
 <div class="flex mb-6">
     <div class="flex-shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
     <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
@@ -321,7 +321,7 @@ Sequence for maximum Tm calculation:   CTCTGCCTAGCTCTCT</code></pre>
         <span>4. 序列可视化</span>
     </h2>
 </doc-anchor-target>
-<p>序列可视化工具使用的是GitHub开源工具<a href="https://github.com/TeselaGen/openVectorEditor">Open Vector Editor</a>，支持小片段DNA序列（非基因组序列）的可视化、注释，并方便用户在此界面直观地进行交互式基因编辑操作。</p>
+<p>序列可视化使用的是<a href="https://github.com/TeselaGen/openVectorEditor">Open Vector Editor</a>这一开源工具，它支持小片段DNA序列（非基因组序列）的可视化、注释，并方便用户在此界面直观地进行交互式基因编辑操作。</p>
 <p>此界面主要以<code v-pre>Linear Map</code>和<code v-pre>Sequence Map</code>两部分组成，如下图所示：</p>
 <p><figure class="content-center">
     <img src="../../static/linear-map.png" alt="Linear Map：以线性矩形、线性箭头、文字等信息展示DNA序列中被注释的功能片段。" />
