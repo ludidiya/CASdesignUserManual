@@ -34,7 +34,7 @@ graph TB;
 
 **3）第三步：** 红色虚线部分是需要该工具网站核心算法需要输出的结果。
 
-- a. 无论是哪种编辑设计，都应该针对编辑区，输出对应的导向性RNA（guide RNA，gRNA）。它是一种短的RNA分子，用于基于CRISPR系统的基因组编辑，这是基因组修饰工具的一种高度特定的类型。gRNA由约20bp长的核苷酸序列组成，该序列与基因组的目标DNA序列结合。
+- a. 对于`敲除`或者`整合(替换/敲入)`设计，都会输出对应的导向性RNA（guide RNA，gRNA）。它是一种短的RNA分子，用于基于CRISPR系统的基因组编辑，这是基因组修饰工具的一种高度特定的类型。gRNA由约20bp长的核苷酸序列组成，该序列与基因组的目标DNA序列结合。
 
 - b. 对于`敲除`设计，则输出敲除片段的修复引物，作为在`敲除`之后发生同源修复时的模板片段。该引物需要通过PCR扩增为完整的双链DNA，在实验阶段进行基因敲除时使用。
 
@@ -44,11 +44,11 @@ graph TB;
 
 随后，本文将对该网站工具所依赖的算法工具进行逐一介绍。
 
-## 2. gRNA设计（CHOPCHOP） 
+## 2. gRNA设计 
 
-CRISPR-Cas的使用在现代生物学中无处不在。例如，CRISPR-Cas已被用于将新序列引入基因组，激活或抑制转录，用于靶向突变，作为诊断工具等。所有的CRISPR-Cas应用都使用sgRNA将CRISPR效应蛋白定向到其靶标。为了方便CRISPR–Cas系统的广泛应用，Labun, K.等人开发了CHOPCHOP这个直观的网络工具，用于在各种应用场景下识别CRISPR-Cas单导向RNA（sgRNA）靶标。
+CRISPR基因编辑技术在现代生物学中无处不在。例如，CRISPR-Cas已被用于将新序列引入基因组，激活或抑制转录，用于靶向突变，作为诊断工具等。所有的CRISPR-Cas应用都使用sgRNA将CRISPR效应蛋白定向到其靶标。为了方便CRISPR系统的广泛应用，Labun, K.等人开发了CHOPCHOP这个直观的网络工具，用于在各种应用场景下识别`CRISPR/Cas9`或`CRISPR/Cpf1`单导向RNA（sgRNA）靶标。
 
-我们这个网页工具，在sgRNA设计部分便是整合了CHOPCHOP的部分功能。具体整合的功能在随后的[参数设置](/instruction/Parameters.md)中会具体介绍到。
+我们这个网页工具，在sgRNA设计部分便是整合了CHOPCHOP的部分功能。这些功能可以提高sgRNA的定位能力、可用性和效率。为了增加靶向方位和特异性，CHOPCHOP为定制长度的gRNA提供了支持，并且使用了来自多个大规模研究的模型来评估整个sgRNA及其周围区域的序列组成。具体见[参数设置](/instruction/Parameters.md)。
 
 !!! **参考资料**
 
@@ -94,7 +94,7 @@ Sequence for maximum Tm calculation:   CTCTGCCTAGCTCTCT
 
 ## 4. 序列可视化
 
-序列可视化工具使用的是GitHub开源工具[Open Vector Editor](https://github.com/TeselaGen/openVectorEditor)，支持小片段DNA序列（非基因组序列）的可视化、注释，并方便用户在此界面直观地进行交互式基因编辑操作。
+序列可视化使用的是[Open Vector Editor](https://github.com/TeselaGen/openVectorEditor)这一开源工具，它支持小片段DNA序列（非基因组序列）的可视化、注释，并方便用户在此界面直观地进行交互式基因编辑操作。
 
 此界面主要以`Linear Map`和`Sequence Map`两部分组成，如下图所示：
 

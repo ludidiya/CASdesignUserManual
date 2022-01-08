@@ -15,11 +15,11 @@ order: D
 
 登录进入[CASdesign网站](http://124.71.187.96:8081/)，在`物种列表`页，首先进行如下操作：
 
-* 选择感兴趣的基因组
+* 选择一个感兴趣的基因组
 
-* 在`位置选择`弹出框中选择感兴趣的编辑位点
+* 在`选择位置`弹出框中选择目标编辑位点
 
-* 在`位置选择`弹出框最下方，可选择使用CRISPR的`Cas9`或`Cpf1`编辑模式进行设计，同时可点击`参数设置`进行具体设置。
+* 在弹框下方，设置使用`CRISPR/Cas9`或`CRISPR/Cpf1`基因编辑工具后，点击`参数设置`可对更多参数进行适当调整。
 
 各参数的详细解释见下文。
 
@@ -38,12 +38,21 @@ order: D
 1000 bp
 !!!
 
-
 ### 2）编辑区同源左、右臂长度
 
-![图2-2. 编辑区域同源修复左、右臂。](../static/parameters/1-2-homologyLestRight.png)
+![图2-2. 编辑区域同源修复左、右臂。](../static/parameters/1-2-homologyLestRight-draw.png)
 
 同源修复的左、右同源臂是发生同源双交换引入外源片段时必须的片段，是为了在引入外源片段时细胞发生同源重组修复过程中可以精准定位到特定位置并引入外源片段的引导者片段。它是在进行`基因敲除/替换`具体编辑操作的时候，`敲除/替换`区两侧的指定区间，需要根据该指定的同源区长度进行编辑区同源左右臂引物的计算。
+
+如图所示的黑色线段表示引物：
+
+* HoL-F: 同源左臂forward引物；
+
+* HoL-R: 同源左臂reverse引物；
+
+* HoR-F: 同源右臂forward引物；
+
+* HoR-R: 同源右臂reverse引物。
 
 !!! **默认值**
 
@@ -74,25 +83,25 @@ order: D
 
 ## 2. Cas9 or Cpf1
 
-![图3. Cas9或Cpf1编辑模式下的可设定参数。](../static/parameters/2-cas9cpf1.png)
-
-根据用户选择的不同基因编辑模式（Cas9或Cpf1），用户可对应分别设置：
+根据用户选择的不同CRISPR效应蛋白（Cas9或Cpf1），用户可对应分别设置：
 
 * a. sgRNA长度：Cas9模式下默认长度为20 bp，Cpf1模式下默认长度为24 bp；
 
 * b. PAM序列：Cas9模式下默认的PAM序列为`NGG`，Cpf1模式下默认是PAM序列为`TTCN`；
 
-* c. gRNA效率算法（详情见下文）；
+* c. gRNA效率算法（详情见下文）：Cas9模式下默认算法是`Doench et al. 2016 - only for NGG PAM`，Cpf1模式下默认算法是`Kim et al. 2018`；
 
-* d. gRNA载体引物（详情见下文）。
+* d. gRNA载体引物（详情见下文）：页面上默认提供的是基于CRISPR/Cas9的p426_Cas9_gRNA-ARS106a载体。
+
+![图3. Cas9或Cpf1编辑模式下的可设定参数。](../static/parameters/2-cas9cpf1.png)
 
 ### 1）效率算法
 
 CRISPR sgRNA可以按2个标准进行排名：
 
-* a. 效率-特定sgRNA促进切割的可能性;
+* a. **效率**：特定sgRNA促进切割的可能性;
 
-* b. 特异性-sgRNA结合脱靶位点的可能性。
+* b. **特异性**：sgRNA结合脱靶位点的可能性。
 
 根据实验研究，CHOPCHOP的初始版本提供了两个简单的效率指标:
 
@@ -100,34 +109,32 @@ CRISPR sgRNA可以按2个标准进行排名：
 
 * b. sgRNA是否在位置20处含有G。
 
-自从CHOPCHOP发布以来，针对不同编辑模式下的gRNA效率评分已发展了越来越多的算法模型。使用这些方法，CHOPCHOP可以使用特定算法对每个sgRNA进行评分，在结果中，该分数被报告为“效率分数（Efficiency Score）”。
+自从CHOPCHOP发布以来，针对不同编辑模式下的gRNA效率评分已发展了越来越多的算法模型。使用这些方法，CHOPCHOP可以使用特定算法对每个sgRNA进行评分，在结果中，该分数被报告为“`效率分数（Efficiency Score）`”。
 
-### 2）gRNA载体引物
+### 2）自定义gRNA引物片段
 
-Reider Apel A等人发表的[【A Cas9-based toolkit to program gene expression in Saccharomyces cerevisiae】](https://pubmed.ncbi.nlm.nih.gov/27899650/)一文中报道了27个高效的Cas9-sgRNA (pCut)质粒，可以整合到酵母1-16号染色体上23个特征良好的位点以使基因发生缺失或替换。
+在实验中，gRNA片段需要插入合适的载体骨架中以构建CRISPR/Cas9或CRISPR/Cpf1表达载体，根据gRNA在载体中的插入位置指定gRNA上下游50bp的片段，以在结果页输出一对gRNA引物。
 
-* [pCut质粒工具包可以从Addgene获取](https://www.addgene.org/kits/mukhopadhyay-pcut-toolkit/#kit-contents)
+以使用`p426_Cas9_gRNA-ARS106a`载体为例，如下图所示：
 
-如下图，以基于CRISPR/Cas9原理对酵母基因组进行基因编辑，并使用[pCut Plasmid Toolkit](https://www.addgene.org/kits/mukhopadhyay-pcut-toolkit/#kit-contents)中[p426_Cas9_gRNA-ARS106a](https://www.addgene.org/browse/sequence/193424/)作为CRISPR基因编辑载体工具为例。在使用该软件进行gRNA设计时，需要指定gRNA在载体中所在位置两侧大约50-60bp（长度可调整）的序列，以最终输出gRNA引物来构建双链gRNA片段。
+* 已知gRNA在载体中的插入位置在`gRNA-scafold`上游;
+* 页面参数设置中指定gRNA上（Forward）下（Reverse）游50bp的长度（图中`白色`标注的区域）；
+* Forward为正义链（Top Strand）5'->3'片段；
+* Reverse为负义链（Bottom Strand）5'->3'片段；
+* 根据改参数设置，最终在结果页会输出`紫色`区域示意的gRNA引物对。
 
-![图3-2. p426_Cas9_gRNA-ARS106a载体与gRNA-Forward、gRNA-Reverse引物示意图。](../static/parameters/2-2-Backbone-gRNA.png)
+![](../static/parameters/zoomedMap.png)
+![](../static/parameters/sequenceMap.png)
+![图3-2. gRNA上下游片段设置示意图。](../static/parameters/2-3-gRNA-primer.png)
 
-在本软件中，该设置在"参数设置——Cas9/Cpf1"界面下，如下图所示位置：
+!!!warning 注意！！！
+需要根据您实际使用的载体骨架更改这两个参数；
 
-![图3-3. gRNA载体引物片段参数设置。](../static/parameters/2-3-gRNA-primer.png)
+网页默认设置的两个片段来自`p426_Cas9_gRNA-ARS106a`载体，它是基于`CRISPR/Cas9`对`酵母`进行基因编辑时常用的pCut载体工具之一。
 
-若设计得到的gRNA序列为`ACATCTCAAACAGAACATTG`，则结果页中得到的gRNA引物为：
-
-* gRNA-Forward: `tcctcgctggcgccggctgggcaacaccttcgggtggcgaatgggactttACATCTCAAACAGAACATTG`
-
-* gRNA-Reverse: `gttgataacggactagccttattttaacttgctatttctagctctaaaacCAATGTTCTGTTTGAGATGT`
-
-小写部分是根据使用的不同载体，在参数设置处定义的gRNA在载体中所处位置两侧片段（方向均为5'->3'），大写部分是gRNA片段。
-
-!!! **注意**
-
-* 软件此处默认参数是使用p426_Cas9_gRNA-ARS106a载体时的引物片段，需要根据实际设计原理（Cas9或Cpf1）所用的载体工具来更新参数。
+[pCut质粒工具包可以从Addgene获取。](https://www.addgene.org/kits/mukhopadhyay-pcut-toolkit/#kit-contents)
 !!!
+
 
 
 ## 3. Primers
