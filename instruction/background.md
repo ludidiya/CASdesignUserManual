@@ -40,7 +40,7 @@ graph TB;
 
 - c. 对于`整合(替换/敲入)`设计，则需根据左右同源臂以及插入的片段设计整合引物。其中，同源修复的左、右同源臂，是物种体内遗传物质发生同源双交换引入外源片段时必须的片段，是为了在引入外源片段时细胞发生同源重组修复过程中可以精准定位到特定位置并引入外源片段的引导者片段。
 
-在[基因敲除具体操作示例](/instruction/Knock-Out.md)以及[基因插入/替换具体操作示例](/instruction/Knock-Insert.md)中，我们有详细的例子讲解如何使用本网站工具进行基因编辑并获取引物结果。
+在[基因敲除具体操作示例](https://ludidiya.github.io/CASdesignUserManual/instruction/parameters/#1%E6%95%B2%E9%99%A4%E5%BC%95%E7%89%A9%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE)以及[基因插入/替换具体操作示例](https://ludidiya.github.io/CASdesignUserManual/instruction/parameters/#2%E6%8F%92%E5%85%A5%E7%89%87%E6%AE%B5%E5%BC%95%E7%89%A9%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE)中，我们有详细的例子讲解如何使用本网站工具进行基因编辑并获取引物结果。
 
 随后，本文将对该网站工具所依赖的算法工具进行逐一介绍。
 

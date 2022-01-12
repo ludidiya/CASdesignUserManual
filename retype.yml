@@ -15,7 +15,7 @@ branding:
 
 links:
 - text: CASdesignWebTool
-  link: http://124.71.187.96:8081/
+  link: http://61.157.76.153:8083/
 
 footer:
   copyright: "&copy; Copyright {{ year }}. [ShenZhen Synthetic Biology Infrustructure.](http://www.isynbio.org.cn/institution-detail.aspx?detail=1651) All rights reserved."

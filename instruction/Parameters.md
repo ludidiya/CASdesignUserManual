@@ -13,7 +13,7 @@ order: D
 
 ![图1. 进入参数设置界面。](../static/parameters/0-setParameters.png)
 
-登录进入[CASdesign网站](http://124.71.187.96:8081/)，在`物种列表`页，首先进行如下操作：
+登录进入[CASdesign网站](http://61.157.76.153:8083/)，在`物种列表`页，首先进行如下操作：
 
 * 选择一个感兴趣的基因组
 
@@ -128,8 +128,8 @@ CRISPR sgRNA可以按2个标准进行排名：
 * 根据该参数设置，最终在结果页会输出`紫色`区域示意的gRNA引物对。
 
 ![](../static/parameters/zoomedMap.png)
-![](../static/parameters/sequenceMap.png)
-![图3-1. gRNA上下游片段设置示意图。](../static/parameters/2-3-gRNA-primer.png)
+![](../static/parameters/2-3-gRNA-primer.png)
+![图3-1. gRNA上下游片段设置示意图。](../static/parameters/sequenceMap.png)
 
 !!!warning 注意！！！
 需要根据您实际使用的载体骨架更改上述两个片段具体序列；
