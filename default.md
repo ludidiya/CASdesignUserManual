@@ -22,4 +22,4 @@ CASdesign工具从最初第一版本，仅支持酿酒酵母基因组基于CAS9�
 
 :sparkles: 3）支持基于CRISPR/Cas9及CRISPR/Cpf1的基因编辑设计（点击[参数设置](./instruction/Parameters.md)查看更多信息）；
 
-:sparkles: 4）管理基因组中已表征过的片段，定义这些功能位点后可及时在位点选择处进行检索。（点击[表征位点管理](./instruction/verified-Sites.md)查看更多信息）。
+:sparkles: 4）添加指定基因组中特征片段，定义这些功能位点后可及时在位点选择处进行检索。（点击[特征位点添加](./instruction/verified-Sites.md)查看更多信息）。
